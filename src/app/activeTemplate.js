@@ -3,11 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
-// Import various templates
-import ImageMap from '../../templates/image-map/page'
-import Islands from '../../templates/islands/page'
-import Notion from '../../templates/notion/page'
-import Windows from '../../templates/windows/page'
+// Import Starter Template (for Portal Core)
 import Starter from '../../templates/starter/page'
 
 /**
@@ -28,10 +24,6 @@ const ActiveTemplate = ({ pages }) => {
   // The same `pages` data is used across all templates in the project
   // TODO: use Context or sth instead of having to pass this prop over and over again
   const templates = {
-    islands: <Islands pages={pages} />,
-    windows: <Windows pages={pages} />,
-    notion: <Notion pages={pages} />,
-    imagemap: <ImageMap pages={pages} />,
     starter: <Starter pages={pages} />
   }
 
